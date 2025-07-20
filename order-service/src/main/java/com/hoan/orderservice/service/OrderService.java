@@ -6,5 +6,5 @@ import java.util.List;
 public interface OrderService {
   void createOrder(Order order);
   List<Order> getOrders();
-  Order getOrderById(Long id);
+  Order  getOrderById(Long id);
 }
