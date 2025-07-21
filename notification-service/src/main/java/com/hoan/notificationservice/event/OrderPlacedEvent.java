@@ -1,4 +1,4 @@
-package com.hoan.orderservice.event;
+package com.hoan.notificationservice.event;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

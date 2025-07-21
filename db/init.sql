@@ -9,3 +9,4 @@ CREATE TABLE orders (
                         product VARCHAR(255),
                         price DOUBLE
 );
+ALTER  TABLE  orders ADD COLUMN total DOUBLE AFTER price;

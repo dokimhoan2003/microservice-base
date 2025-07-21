@@ -30,7 +30,7 @@ public class OrderServiceImpl implements OrderService {
       .build();
 
     kafkaTemplate.send("order-topic", event);
-    log.info("Send Kafka event: {}", event);
+    log.warn("Send Kafka event: {}", event.toString());
   }
 
   @Override
