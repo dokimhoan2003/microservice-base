@@ -9,4 +9,5 @@ public interface UserService {
   void createUser(User user);
   List<User> getUsers();
   UserDto getUserById(Long id);
+  User getByEmail(String email);
 }

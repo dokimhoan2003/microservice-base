@@ -5,6 +5,7 @@ import com.hoan.userservice.model.User;
 import com.hoan.userservice.repository.UserRepository;
 import com.hoan.userservice.service.UserService;
 import java.util.List;
+import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
@@ -38,5 +39,10 @@ public class UserServiceImpl implements UserService {
       .id(user.getId())
       .name(user.getName())
       .email(user.getEmail()).build();
+  }
+
+  @Override
+  public User getByEmail(String email) {
+    return userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User not found"));
   }
 }

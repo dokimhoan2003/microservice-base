@@ -10,3 +10,4 @@ CREATE TABLE orders (
                         price DOUBLE
 );
 ALTER  TABLE  orders ADD COLUMN total DOUBLE AFTER price;
+ALTER  TABLE  users ADD COLUMN password VARCHAR(255) AFTER email;
